@@ -1,2 +1,2 @@
-# alperenqwq.github.io
+# sanalgazete.github.io
 Kişisel Blok
