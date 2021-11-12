@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uygulamam - tema 2</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+   <nav>
+      <div class="drop-btn">
+         MENÜ<span class="fas fa-caret-down"></span>
+      </div>
+      <div class="tooltip"></div>
+      <div class="wrapper1">
+         <ul class="menu-bar">
+            <li>
+               <a href="file:///C:/Users/Pc/Desktop/Uygulamam/ana%20sayfa/2ci%20tema/index.html#">
+                  <div class="icon">
+                     <span class="fas fa-home"></span>
+                  </div>
+                  Home 
+               </a>
+            </li>
+            <li class="setting-item">
+               <a href="#">
+                  <div class="icon">
+                     <span class="fas fa-cog"></span>
+                  </div>
+                  Ayarlar <i class="fas fa-angle-right"></i>
+               </a>
+            </li>
+            <li class="help-item">
+               <a href="#">
+                  <div class="icon">
+                     <span class="fas fa-question-circle"></span>
+                  </div>
+                 Yardim & Bildir <i class="fas fa-angle-right"></i>
+               </a>
+            </li>
+            <li>
+               <a href="file:///C:/Users/Pc/Desktop/Uygulamam/ben/index.html">
+                  <div class="icon">
+                     <span class="fas fa-user"></span>
+                  </div>
+                  Hakkımda 
+               </a>
+            </li>
+         </ul>
+         <!-- Settings & privacy Menu-items -->
+         <ul class="setting-drop">
+            <li class="arrow back-setting-btn"><span class="fas fa-arrow-left"></span>Ayarlar</li>
+            <li>
+               <a href="#">
+                  <div class="icon">
+                     <span class="fas fa-user"></span>
+                  </div>
+                  Profil   
+               </a>
+            </li>
+            <li>
+               <a href="#">
+                  <div class="icon">
+                     <span class="fas fa-lock"></span>
+                  </div>
+                  Şifre
+               </a>
+            </li>
+            <li>
+               <a href="file:///C:/Users/Pc/Desktop/Uygulamam/tema%20se%C3%A7me/index.html">
+                  <div class="icon">
+                     <span class="fas fa-address-book"></span>
+                  </div>
+                  Tema
+               </a>
+            </li>
+            <li>
+               <a href="#">
+                  <div class="icon">
+                     <span class="fas fa-globe-asia"></span>
+                  </div>
+                  Diller
+               </a>
+            </li>
+            <li>
+               <a href="#">
+                  <div class="icon">
+                     <span class="fas fa-sign-out-alt"></span>
+                  </div>
+                  Çıkış Yap
+               </a>
+            </li>
+         </ul>
+         <!-- Help & support Menu-items -->
+         <ul class="help-drop">
+            <li class="arrow back-help-btn"><span class="fas fa-arrow-left"></span>Help & support</li>
+            <li>
+               <a href="#">
+                  <div class="icon">
+                     <span class="fas fa-question-circle"></span>
+                  </div>
+                  Help centre 
+               </a>
+            </li>
+            <li>
+               <a href="#">
+                  <div class="icon">
+                     <span class="fas fa-envelope"></span>
+                  </div>
+                  Support Inbox 
+               </a>
+            </li>
+            <li>
+               <a href="#">
+                  <div class="icon">
+                     <span class="fas fa-comment-alt"></span>
+                  </div>
+                  Send feedback 
+               </a>
+            </li>
+            <li>
+               <a href="#">
+                  <div class="icon">
+                     <span class="fas fa-exclamation-circle"></span>
+                  </div>
+                  Report problem 
+               </a>
+            </li>
+         </ul>
+      </div>
+   </nav>
+   <script>
+      const drop_btn = document.querySelector(".drop-btn span");
+      const tooltip = document.querySelector(".tooltip");
+      const menu_wrapper = document.querySelector(".wrapper1");
+      const menu_bar = document.querySelector(".menu-bar");
+      const setting_drop = document.querySelector(".setting-drop");
+      const help_drop = document.querySelector(".help-drop");
+      const setting_item = document.querySelector(".setting-item");
+      const help_item = document.querySelector(".help-item");
+      const setting_btn = document.querySelector(".back-setting-btn");
+      const help_btn = document.querySelector(".back-help-btn");
+        drop_btn.onclick = (()=>{
+          menu_wrapper.classList.toggle("show");
+          tooltip.classList.toggle("show");
+        });
+        setting_item.onclick = (()=>{
+          menu_bar.style.marginLeft = "-400px";
+          setTimeout(()=>{
+            setting_drop.style.display = "block";
+          }, 100);
+        });
+        help_item.onclick = (()=>{
+          menu_bar.style.marginLeft = "-400px";
+          setTimeout(()=>{
+            help_drop.style.display = "block";
+          }, 100);
+        });
+        setting_btn.onclick = (()=>{
+          menu_bar.style.marginLeft = "0px";
+          setting_drop.style.display = "none";
+        });
+        help_btn.onclick = (()=>{
+          help_drop.style.display = "none";
+          menu_bar.style.marginLeft = "0px";
+        });
+   </script>
+  
+  
+  <!-----------müzik------------->
+    <div class="wrapper">
+    <div class="top-bar">
+      <i class="material-icons">expand_more</i>
+      <span>Now Playing</span>
+      <i class="material-icons">more_horiz</i>
+    </div>
+    <div class="img-area">
+      <img src="" alt="">
+    </div>
+    <div class="song-details">
+      <p class="name"></p>
+      <p class="artist"></p>
+    </div>
+    <div class="progress-area">
+      <div class="progress-bar">
+        <audio id="main-audio" src=""></audio>
+      </div>
+      <div class="song-timer">
+        <span class="current-time">0:00</span>
+        <span class="max-duration">0:00</span>
+      </div>
+    </div>
+    <div class="controls">
+      <i id="repeat-plist" class="material-icons" title="Playlist looped">repeat</i>
+      <i id="prev" class="material-icons">skip_previous</i>
+      <div class="play-pause">
+        <i class="material-icons play">play_arrow</i>
+      </div>
+      <i id="next" class="material-icons">skip_next</i>
+      <i id="more-music" class="material-icons">queue_music</i>
+    </div>
+    <div class="music-list">
+      <div class="header">
+        <div class="row">
+          <i class= "list material-icons">queue_music</i>
+          <span>Music list</span>
+        </div>
+        <i id="close" class="material-icons">close</i>
+      </div>
+      <ul>
+        <!-- here li list are coming from js -->
+      </ul>
+    </div>
+  </div>
+
+  <script src="js/music-list.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>
